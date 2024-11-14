@@ -1,0 +1,29 @@
+<ion-content [fullscreen]="true" class="ion-padding-horizontal ion-text-center">
+    <p>
+      ¡Bienvenido/a, {{ user.nombre }} {{ user.apellido }}!
+    </p>
+    <p>
+      Escanea el código QR para registrar tu asistencia a clases
+    </p>
+
+    <div *ngIf="escaneando">
+      <video #video autoplay class="video-frame"></video>
+      <canvas #canvas style="display: none;"></canvas>
+    </div>
+
+    <div *ngIf="!escaneando">
+      <img src="../../assets/img/camara-apagada.png" class="video-frame">
+    </div>
+
+    <ion-button *ngIf="!escaneando" expand="full" (click)="comenzarEscaneo()" class="button1">
+      <ion-label>Escanear QR</ion-label>
+    </ion-button>
+
+    <ion-button *ngIf="escaneando" expand="full" (click)="detenerEscaneo()" class="button1">
+      <ion-label>Detener Escaneo</ion-label>
+    </ion-button>
+
+    <ion-button (click)="cerrarSesion()" fill="clear">
+      Cerrar Sesión
+    </ion-button>
+</ion-content>

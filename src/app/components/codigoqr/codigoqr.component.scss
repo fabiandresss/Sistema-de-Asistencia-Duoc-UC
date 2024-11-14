@@ -1,0 +1,56 @@
+ion-toolbar {
+  --background: #1A1A1A;
+  overflow: hidden;
+  position: fixed;
+}
+
+ion-toolbar ion-title {
+  color: white;
+  position: absolute;
+  top: 30%;
+}
+
+ion-footer {
+  --background: #1A1A1A;
+}
+
+ion-content {
+  display: flex;
+  justify-content: center; /* Centra verticalmente */
+  align-items: flex-start; /* Centra horizontalmente */
+  text-align: center;
+  height: 10%; /* Asegura que ocupe todo el espacio */
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los elementos en el eje horizontal */
+  padding: 10px; /* Ajusta el padding según sea necesario */
+}
+
+.video-frame {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 50vw;
+  height: 50vw;
+  object-fit: cover;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.cerrar-sesion {
+  margin-top: 20px; /* Añade espacio adicional arriba del botón de "Cerrar Sesión" */
+}
+
+:root {
+  --ion-color-primary: #3880ff; /* Azul predeterminado */
+  --ion-color-primary-rgb: 56, 128, 255;
+
+  /* Puedes agregar otros tonos de azul personalizados */
+  --ion-color-custom-blue: #1e90ff; /* Color azul personalizado */
+  --ion-color-custom-blue-rgb: 30, 144, 255;
+}
